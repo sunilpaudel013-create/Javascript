@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copying the style from the image</title>
+</head>
+<body>
+    <p class="title">Adults Plain Cotton T-shirt</p>
+    <p class="price">Price : $7.99</p>
+    <button class="add-button" onclick="alert('Added')">Add to Cart</button>
+    
+    <button class="buy-button" onclick="
+    console.log('loading ')
+    alert('purchased')">Buy now</button>
+    <style>
+        .add-button 
+        {
+            font-size: 16px;
+            color: black;
+            background-color: yellow;
+            border-color: black;
+            border-width:2px;
+            cursor: pointer;
+
+        }
+        .buy-button 
+        {
+            font-size: 16px;
+            margin-left: 10px;
+            color: black;
+            border-style: solid; 
+            border-color: black;
+            border-width: 2px;
+            background-color: orange;
+            cursor: pointer;
+        }
+
+        .title
+        {
+            font-family: Arial;
+            font-size:20px;
+
+        }
+        .price
+        {
+            line-height:20px;
+            font-size:20px;
+            font-family: Arial;
+        }
+
+    </style>
+</body>
+</html>
