@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object exercise</title>
+</head>
+<body>
+    <p>
+        <button onclick="
+            computerGuess();
+            checkResult('Heads');
+            console.log(result);
+            console.log(`Wins: ${score.wins}, Losses: ${score.loss}`);
+        ">Heads</button>
+
+        <button onclick="
+            computerGuess();
+            checkResult('Tails');
+            console.log(result);
+            console.log(`Wins: ${score.wins}, Losses: ${score.loss}`);
+        ">Tails</button>
+    </p>
+
+    <script>
+        const score = JSON.parse(localStorage.getItem('score')) ||{
+            wins: 0,
+            loss: 0
+        };
+
+        let compGuess = '';
+        let result = '';
+
+        function checkResult(userguess) {
+            if (userguess === compGuess) {
+                result = 'you win';
+                score.wins += 1;
+            } else {
+                result = 'you lose';
+                score.loss += 1;
+            }
+            localStorage.setItem('score', JSON.stringify(score));
+        }
+
+        function computerGuess() {
+            const randomNumber = Math.random();
+            compGuess = randomNumber < 0.5 ? 'Heads' : 'Tails';
+        }
+    </script>
+</body>
+</html>
