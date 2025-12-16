@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM excercise</title>
+</head>
+<body>
+    <button onclick=" checkEnterValue('heads');
+        ">heads</button>
+    <button onclick="checkEnterValue('tails')">tails</button>
+    <p class="button-details" ></p>
+    <script>
+        function checkEnterValue(button)
+        {
+            document.querySelector('.button-details')
+            .innerHTML = `you choose :${button}`;
+        }
+
+    </script>
+</body>
+</html>
