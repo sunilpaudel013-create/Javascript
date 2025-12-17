@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to dolist concept</title>
+</head>
+<body>
+    <p>Todo list practice 2</p>
+    <input type="text" class="text-input" placeholder ="Todo name" onkeydown="
+    if(event.key=== 'Enter')
+    {
+        displayTodo();
+    }
+    ">
+    <button class="add-button" onclick="displayTodo();">Add</button>
+
+    <p class="display-list"></p>
+    <script src ="scripts/11-todo-list.js"></script>
+</body>
+</html>
